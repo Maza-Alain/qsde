@@ -6,7 +6,7 @@ runtime: nodejs16
 env_variables:
   USER_SESSIONS_STORAGE_PATH: default
   APP_PROPERTIES_PATHS: properties
-  BBVA_ENV: {{ env }}
+  # BBVA_ENV: {{ env }}
 
 
 handlers:
