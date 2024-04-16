@@ -7,8 +7,8 @@ RUN npm install
 # To ignore files like node_modules, dist, use .dockerignore file
 COPY . .
 RUN npm run build
-COPY /app/dist ../public/
-RUN npm run build
+# COPY /app/dist ../public/
+# RUN npm run build
 # production stage
 FROM nginx:stable-alpine as production-stage
 COPY --from=build-stage /app/dist /usr/share/nginx/html
