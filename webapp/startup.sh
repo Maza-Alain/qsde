@@ -1,3 +1,4 @@
+cd webapp
 npm run build
 echo 'se completo el build'
 ls
