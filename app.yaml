@@ -14,7 +14,7 @@ handlers:
     script: auto
     secure: always
     http_headers:
-      Access-Control-Allow-Origin: https://qsde-0.uc.r.appspot.com/
+      Access-Control-Allow-Origin: https://qsde-0.uc.r.appspot.com
 
   - url: /(.*\.(html|js|css|svg|json|png|jpg|gif|map|woff|ttf|ico))$
     static_files: public/\1
@@ -22,10 +22,10 @@ handlers:
     secure: always
     login: required
     http_headers:
-      Access-Control-Allow-Origin: https://qsde-0.uc.r.appspot.com/
+      Access-Control-Allow-Origin: https://qsde-0.uc.r.appspot.com
 
   - url: /.*
     script: auto
     secure: always
     http_headers:
-      Access-Control-Allow-Origin: https://qsde-0.uc.r.appspot.com/
+      Access-Control-Allow-Origin: https://qsde-0.uc.r.appspot.com
