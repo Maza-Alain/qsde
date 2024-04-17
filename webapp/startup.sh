@@ -1,5 +1,5 @@
-sudo apt-get install nodejs
-sudo apt install npm
+apt-get install nodejs
+apt install npm
 cd webapp
 # npm run build && echo '¡Se completó el build!' && ls && rm -r ../public/ && cp -r dist/ ../public/
 # # echo 'se completo el build'
