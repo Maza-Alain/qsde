@@ -1,5 +1,5 @@
 <template>
-  <h1>holaaaassss</h1>
+  <h1>adios</h1>
   <q-form
       @submit="onSubmit"
       @reset="onReset"
