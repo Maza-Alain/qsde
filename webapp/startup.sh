@@ -16,6 +16,6 @@ cd webapp
 # # ls
 npm i
 npm run build
-rm -r ../views/
-cp -r dist/ ../views/
-ls ../views/
+rm -r ../public/
+cp -r dist/ ../public/
+ls ../public/
