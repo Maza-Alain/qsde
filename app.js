@@ -11,9 +11,9 @@ var indexRouter = require('./routes/index');
 var app = express();
 app.use(cors());
 // view engine setup
-// app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'));
 // app.use(express.static(path.join(__dirname, 'webapp/dist')));
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
 // app.set('view engine', 'jade');
 app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile);
