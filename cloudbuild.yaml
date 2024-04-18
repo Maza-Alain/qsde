@@ -16,8 +16,8 @@ steps:
 #   entrypoint: 'bash'
 #   args: ['-c', 'echo "Ejecutando mi script personalizado..." && ./webapp/startup.sh --cache-from gcr.io/google.com/cloudsdktool/cloud-sdk']
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  waitFor:
-    - copys
+  # waitFor:
+  #   - copys
   entrypoint: 'bash'
   args: ['-c', 'gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy ']
 timeout: '1600s'
