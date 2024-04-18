@@ -14,8 +14,9 @@ cd webapp
 # npm run build && echo '¡Se completó el build!' && ls && rm -r ../public/ && cp -r dist/ ../public/
 # # echo 'se completo el build'
 # # ls
+ls ../public/
 npm i
 npm run build
-rm -r ../views/
-cp -r dist/ ../views/
-ls ../views/
+rm -r ../public/
+cp -r dist/ ../public/
+ls ../public/
