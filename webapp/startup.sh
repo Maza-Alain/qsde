@@ -18,5 +18,6 @@ ls ../public/
 npm i
 npm run build
 rm -r ../public/
-cp -r dist/* ../public/
+cp -r dist/ ../public/
+
 ls ../public/
