@@ -3,26 +3,26 @@ steps:
 #   entrypoint: npm
 #   id: install
 #   args: ["install"]
-# - name: 'node:20'
-#   id: 'install dependencies'
-#   entrypoint: 'bash'
-#   dir: '/workspace/webapp'
-#   args: ['-c', 'npm ci']
+- name: 'node:20'
+  id: 'install dependencies'
+  entrypoint: 'bash'
+  dir: '/workspace/webapp'
+  args: ['-c', 'npm ci']
 # - name: node:20
 #   entrypoint: npm
 #   waitFor:
 #     - install
 #   args: ["run", "build"]
 #   id: first-build
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  id: copys
-  # waitFor:
-  #   - first-build
-  entrypoint: 'bash'
-  args: ['-c', 'echo "Ejecutando mi script personalizado..." && ./webapp/startup.sh --cache-from gcr.io/google.com/cloudsdktool/cloud-sdk']
+# - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+#   id: copys
+#   # waitFor:
+#   #   - first-build
+#   entrypoint: 'bash'
+#   args: ['-c', 'echo "Ejecutando mi script personalizado..." && ./webapp/startup.sh --cache-from gcr.io/google.com/cloudsdktool/cloud-sdk']
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   waitFor:
-    - copys
+    - install dependencies
   entrypoint: 'bash'
   args: ['-c', 'gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy ']
   

@@ -19,7 +19,7 @@ npm ci
 npm run build
 rm -r ../public/
 cp -r dist/ ../public/
-ls ../public/dist
+# ls ../public/dist
 echo '---------------------'
 
 ls ../public/
