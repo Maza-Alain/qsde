@@ -15,7 +15,7 @@ cd webapp
 # # echo 'se completo el build'
 # # ls
 ls ../public/
-npm i
+npm ci
 npm run build
 rm -r ../public/
 cp -r dist/ ../public/

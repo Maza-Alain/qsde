@@ -15,9 +15,9 @@ handlers:
     secure: always
     # http_headers:
     #   Access-Control-Allow-Origin: '*'
-  - url: /(.*\.(html|js|css|svg|json|png|jpg|gif|map|woff|ttf|ico))$
+  - url: /(.*\.(html|js|css|svg|json|png|jpg|gif|map|woff|woff2|ttf|ico))$
     static_files: public/\1
-    upload: public/.*\.(html|js|css|svg|json|png|jpg|gif|map|woff|ttf|ico)
+    upload: public/.*\.(html|js|css|svg|json|png|jpg|gif|map|woff|woff2|ttf|ico)
     secure: always
     http_headers:
       Access-Control-Allow-Origin: '*'
