@@ -1,5 +1,5 @@
 <template>
-  <h1>porfin salio</h1>
+  <h1>porfin salio esto</h1>
   <q-form
       @submit="onSubmit"
       @reset="onReset"
